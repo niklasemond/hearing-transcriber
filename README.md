@@ -13,23 +13,31 @@ A Flask-based web application that automatically transcribes congressional heari
 ## Installation
 
 1. Clone the repository:
+   ```
    git clone https://github.com/YOUR-USERNAME/hearing-transcriber.git
    cd hearing-transcriber
+   ```
 
 2. Create and activate a virtual environment:
+   ```
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
 3. Install required packages:
+   ```
    pip install -r requirements.txt
+   ```
 
 4. Create a .env file with required tokens:
-   SECRET_KEY=your_flask_secret_key
+   ```SECRET_KEY=your_flask_secret_key```
           - This is a random string you generate for Flask security
           - You can generate one in Python using:
+              ```
               _import secrets
               print(secrets.token_hex(16)_
-          - Copy the output and use it as your SECRET_KEY
+              ```
+          - Copy the output and use it as your `SECRET_KEY`
 
    HF_TOKEN=your_huggingface_token
       - Create account at Hugging Face (https://huggingface.co/)
@@ -58,7 +66,9 @@ A Flask-based web application that automatically transcribes congressional heari
 ## Usage
 
 1. Start the Flask server:
+   ```
    python run.py
+   ```
 
 2. Open your browser and navigate to:
    http://localhost:5000
@@ -73,18 +83,20 @@ A Flask-based web application that automatically transcribes congressional heari
 
 ## Output Files
 
-- transcript.json: Full transcript with speaker labels and timestamps
-- transcript.txt: Human-readable transcript with summary
-- transcript.srt: Subtitle format with speaker identification
+- `transcript.json`: Full transcript with speaker labels and timestamps
+- `transcript.txt`: Human-readable transcript with summary
+- `transcript.srt`: Subtitle format with speaker identification
 
 ## Project Structure
 
+```
 /app
   /static        - Static assets and uploaded images
   /storage       - Temporary file storage
   /templates     - HTML templates
   /transcriber   - Core transcription logic
   /config        - Application configuration
+```
 
 ## Security Notes
 
