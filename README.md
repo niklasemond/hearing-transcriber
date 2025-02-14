@@ -96,7 +96,3 @@ A Flask-based web application that automatically transcribes congressional heari
 ## License
 
 MIT License - See LICENSE file for details
-
-## Contributing
-
-Contributions are welcome! Please read CONTRIBUTING.md for guidelines.
